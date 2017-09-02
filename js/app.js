@@ -1,0 +1,1 @@
+var phpApp = angular.module('phpApp', []);
