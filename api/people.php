@@ -7,6 +7,6 @@ include 'config.php';
 include 'db_functions.php';
 include 'queries.php';
 
-echo selectData($selectFromPerson, $servername, $username, $password, $dbname);
+echo read($selectFromPerson, $servername, $username, $password, $dbname);
 
 ?>
