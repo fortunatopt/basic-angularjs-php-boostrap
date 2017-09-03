@@ -1,0 +1,10 @@
+<!-- Example row of columns -->
+<div class="row">
+    <div class="col-md-4" ng-repeat="person in people | filter:userSearch">
+        <h2>{{person.firstname}} {{person.lastname}}</h2>
+        <p>
+            This is a repeater with the information for all the people. The current record is Id #{{person.id}}, and was created on {{person.reg_date}}.
+        </p>
+        <p><a class="btn btn-secondary" href="mailto:{{person.email}}" role="button">Email &raquo;</a></p>
+    </div>
+</div>
