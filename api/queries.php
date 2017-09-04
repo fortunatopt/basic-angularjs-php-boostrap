@@ -11,17 +11,42 @@ $createTablePerson = "CREATE TABLE Person
     email VARCHAR(50), 
     reg_date TIMESTAMP)";
 
-$insertRecordsPerson = "INSERT INTO PERSON 
-    (firstname, lastname, email) VALUES 
-    ('John', 'Flintsone', 'jf@example.com'),
-    ('Fred', 'Rubble', 'fr@example.com'),
-    ('Alex', 'Johnson', 'aj@example.com'),
-    ('Herb', 'Jones', 'hj@example.com')";
-
 $dropDatabaseTest = "DROP DATABASE ".$dbname;
 
 $deleteRecordsPerson = "DELETE FROM Person";
 
 $selectFromPerson = "SELECT * FROM Person";
+
+function createInsertQuery($total)
+{
+    $firstNames = array(
+        'Fred',
+        'John',
+        'Alex',
+        'Kirk'
+    );
+    
+    $lastNames = array(
+        'Flintsone',
+        'Rubble',
+        'Johnson',
+        'Jones'
+    );
+    
+    $fCount = count($firstNames);
+    $lCount = count($lastNames);
+    
+    $insertRecordsPerson = "INSERT INTO PERSON (firstname, lastname, email) VALUES ";
+    
+    for ($j = 0; $j < $total; $j++) {
+        $first = $firstNames[rand(0, $fCount - 1)];
+        $last = $lastNames[rand(0, $lCount - 1)];
+        $insertRecordsPerson .= "('" . $first . "', '" . $last . "', '" . $first . "." . $last . "@example.com'),";
+    }
+    $insertRecordsPerson = substr($insertRecordsPerson, 0, -1);
+    return $insertRecordsPerson;
+}
+
+
 
 ?>

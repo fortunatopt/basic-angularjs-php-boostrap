@@ -4,6 +4,7 @@ include '../config.php';
 include '../db_functions.php';
 include '../queries.php';
 
-echo execute($insertRecordsPerson, $servername, $username, $password, $dbname);
+$sql = createInsertQuery(10);
+echo execute($sql, $servername, $username, $password, $dbname);
 
 ?>
