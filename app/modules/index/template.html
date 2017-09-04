@@ -1,3 +1,15 @@
 <div class="row">
-    <div ng-bind-html="data"></div>
+    <div class="col-md-6">
+        <p>This is the main page. From here you can use the menus above to do various things such as View data, setup the app,
+            and remove the app.</p>
+        <p>To get started you will need to first make sure you have XAMPP up and running with Apache and MySQL</p>
+        <p>When you turn on MySQL, you will need to go into phpMyAdmin and setup a database user for the application. Make sure
+            the user can read, write, and execute.</p>
+    </div>
+    <div class="col-md-6">
+        <p>Now with the user created, you need to add the config information. The config file is found in '/api/config.php'.
+            You need to edit the database connection information and the database name.</p>
+        <p>Now you can run the application. From the menu at the top, click 'Dropdown >> Setup'. This will create the database, create the Person table, and add some records.</p>
+        <p>Now click the link for 'View Data', and you will see some more data. You can test out the links at the top to remove the records, add more, and remove the database.</p>
+    </div>
 </div>
