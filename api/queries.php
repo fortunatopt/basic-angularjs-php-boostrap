@@ -1,8 +1,8 @@
 <?php
 
-include 'config.php';
+$dbConfig = new DBConfig();
 
-$createDatabaseTest = "CREATE DATABASE ".$dbname;
+$createDatabaseTest = "CREATE DATABASE ".$dbConfig->dbname;
 
 $createTablePerson = "CREATE TABLE Person 
     (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,  
@@ -11,7 +11,7 @@ $createTablePerson = "CREATE TABLE Person
     email VARCHAR(50), 
     reg_date TIMESTAMP)";
 
-$dropDatabaseTest = "DROP DATABASE ".$dbname;
+$dropDatabaseTest = "DROP DATABASE ".$dbConfig->dbname;
 
 $deleteRecordsPerson = "DELETE FROM Person";
 

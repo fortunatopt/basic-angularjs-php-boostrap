@@ -4,6 +4,9 @@ include '../config.php';
 include '../db_functions.php';
 include '../queries.php';
 
-echo execute($dropDatabaseTest, $servername, $username, $password, $dbname);
+$dbConfig = new DBConfig();
+$dbFunctions = new DBFunctions();
+
+echo $dbFunctions->execute($dropDatabaseTest, $dbConfig->servername, $dbConfig->username, $dbConfig->password, $dbConfig->dbname);
 
 ?>
