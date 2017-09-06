@@ -1,8 +1,10 @@
 <?php
 
-$servername = "localhost:3306";
-$username = "phpApp";
-$password = "mysqlpasswd1!";
-$dbname = "angularPhpDB";
+class DBConfig {
+    public $servername = "localhost:3306";
+    public $username = "phpApp";
+    public $password = "mysqlpasswd1!";
+    public $dbname = "angularPhpDB";
+}
 
 ?>
